@@ -88,13 +88,13 @@ const MyBookingsPage = () => {
     return <Error title="Failed to Load Bookings" message={error} onRetry={loadBookings} />;
   }
 
-  return (
-    <div className="min-h-screen bg-background">
-      <div className="bg-gradient-to-r from-primary via-secondary to-primary py-8">
+return (
+    <div className="min-h-screen bg-gray-900">
+      <div className="bg-gradient-to-r from-purple-800 via-purple-600 to-cyan-600 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-2">My Bookings</h1>
-            <p className="text-blue-100 text-lg">
+            <p className="text-purple-100 text-lg">
               Manage your flight bookings and travel history
             </p>
           </div>
@@ -109,10 +109,10 @@ const MyBookingsPage = () => {
               <button
                 key={option.value}
                 onClick={() => setFilter(option.value)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   filter === option.value
-                    ? "bg-primary text-white shadow-lg"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
+                    ? "bg-purple-600 text-white shadow-lg"
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-600"
                 }`}
               >
                 {option.label}

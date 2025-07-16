@@ -152,13 +152,13 @@ const SupportPage = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-background">
-      <div className="bg-gradient-to-r from-primary via-secondary to-primary py-8">
+return (
+    <div className="min-h-screen bg-gray-900">
+      <div className="bg-gradient-to-r from-purple-800 via-purple-600 to-cyan-600 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-2">Support Center</h1>
-            <p className="text-blue-100 text-lg">
+            <p className="text-purple-100 text-lg">
               We're here to help you with any questions or concerns
             </p>
           </div>
@@ -167,16 +167,16 @@ const SupportPage = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Tab Navigation */}
-        <div className="mb-8">
-          <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
+<div className="mb-8">
+          <div className="flex space-x-1 bg-gray-800 p-1 rounded-lg">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex-1 flex items-center justify-center space-x-2 py-3 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
                   activeTab === tab.id
-                    ? "bg-white text-primary shadow-sm"
-                    : "text-gray-600 hover:text-gray-900"
+                    ? "bg-gray-700 text-purple-400 shadow-sm"
+                    : "text-gray-400 hover:text-gray-200"
                 }`}
               >
                 <ApperIcon name={tab.icon} className="w-5 h-5" />
@@ -279,9 +279,9 @@ const SupportPage = () => {
                   />
                 </div>
 
-                <Button
+<Button
                   type="submit"
-                  className="w-full md:w-auto bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white px-8 py-3"
+                  className="w-full md:w-auto bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600 text-white px-8 py-3"
                 >
                   <ApperIcon name="Send" className="w-5 h-5 mr-2" />
                   Send Message

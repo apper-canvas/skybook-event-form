@@ -78,8 +78,8 @@ const BookingPage = ({ selectedFlight, searchCriteria }) => {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-background">
+return (
+    <div className="min-h-screen bg-gray-900">
       <BookingProgress currentStep={currentStep} />
       
       <div className="py-8">

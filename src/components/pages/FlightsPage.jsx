@@ -218,8 +218,8 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
     return <Error title="Loading Failed" message={error} onRetry={loadFlights} />;
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
       {/* Hero Section */}
       <div className="relative py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -229,11 +229,11 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Explore 
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Flights</span>
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> Flights</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Discover the best flight deals and book your next journey
             </p>
           </motion.div>
@@ -250,10 +250,10 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="max-w-2xl mx-auto"
           >
-            <Card className="p-6">
+<Card className="p-6 bg-gray-800 border-gray-700">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Flight Status</h3>
-                <p className="text-gray-600">Check real-time status of any flight</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Flight Status</h3>
+                <p className="text-gray-300">Check real-time status of any flight</p>
               </div>
               
               <div className="flex space-x-4 mb-4">
@@ -312,8 +312,8 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
         </div>
       </div>
 
-      {/* Featured Flights */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+{/* Featured Flights */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -322,8 +322,8 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
             className="flex flex-col md:flex-row md:items-center md:justify-between mb-8"
           >
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Flights</h2>
-              <p className="text-gray-600">Best deals and popular routes</p>
+              <h2 className="text-3xl font-bold text-white mb-2">Featured Flights</h2>
+              <p className="text-gray-300">Best deals and popular routes</p>
             </div>
             
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mt-4 md:mt-0">
@@ -375,20 +375,20 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
             ))}
           </motion.div>
 
-          {featuredFlights.length === 0 && (
+{featuredFlights.length === 0 && (
             <div className="text-center py-12">
-              <ApperIcon name="Plane" className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No flights found</h3>
-              <p className="text-gray-600 mb-4">Try adjusting your filters or check back later</p>
+              <ApperIcon name="Plane" className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No flights found</h3>
+              <p className="text-gray-300 mb-4">Try adjusting your filters or check back later</p>
               <Button onClick={() => setFilterBy("all")}>Clear Filters</Button>
             </div>
           )}
 
           <div className="text-center mt-12">
-            <Button
+<Button
               onClick={() => handleSearch({ origin: "", destination: "", departureDate: "", passengers: 1, class: "economy", tripType: "round-trip" })}
               size="lg"
-              className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary"
+              className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600"
             >
               <ApperIcon name="Search" className="w-5 h-5 mr-2" />
               Search All Flights
@@ -397,8 +397,8 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
         </div>
       </div>
 
-      {/* Quick Stats */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
+{/* Quick Stats */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-800 to-cyan-700">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -408,19 +408,19 @@ const FlightsPage = ({ onFlightSelect, onSearch }) => {
           >
             <div>
               <p className="text-4xl font-bold mb-2">{allFlights.length}</p>
-              <p className="text-blue-100">Available Flights</p>
+              <p className="text-purple-200">Available Flights</p>
             </div>
-            <div>
+<div>
               <p className="text-4xl font-bold mb-2">{new Set(allFlights.map(f => f.airline)).size}</p>
-              <p className="text-blue-100">Airlines</p>
+              <p className="text-purple-200">Airlines</p>
             </div>
             <div>
               <p className="text-4xl font-bold mb-2">{new Set(allFlights.map(f => f.origin)).size}</p>
-              <p className="text-blue-100">Destinations</p>
+              <p className="text-purple-200">Destinations</p>
             </div>
             <div>
               <p className="text-4xl font-bold mb-2">₹{Math.min(...allFlights.map(f => f.price)).toLocaleString()}</p>
-              <p className="text-blue-100">Lowest Price</p>
+              <p className="text-purple-200">Lowest Price</p>
             </div>
           </motion.div>
         </div>

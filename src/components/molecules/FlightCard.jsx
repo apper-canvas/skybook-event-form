@@ -40,15 +40,15 @@ const FlightCard = ({ flight, onSelect, onViewDetails }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Card className="p-6 hover:shadow-xl transition-all duration-300 cursor-pointer group" hover>
+<Card className="p-6 hover:shadow-xl transition-all duration-300 cursor-pointer group bg-gray-800 border-gray-700" hover>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-full flex items-center justify-center">
               <ApperIcon name={getAirlineIcon(flight.airline)} className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">{flight.airline}</h3>
-              <p className="text-sm text-gray-600">{flight.flightNumber}</p>
+              <h3 className="font-semibold text-white">{flight.airline}</h3>
+              <p className="text-sm text-gray-400">{flight.flightNumber}</p>
             </div>
           </div>
           <Badge variant={flight.class === "economy" ? "default" : "primary"}>
@@ -58,9 +58,9 @@ const FlightCard = ({ flight, onSelect, onViewDetails }) => {
 
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-8">
-            <div className="text-center">
-              <p className="text-2xl font-bold text-gray-900">{formatTime(flight.departureTime)}</p>
-              <p className="text-sm text-gray-600">{flight.origin}</p>
+<div className="text-center">
+              <p className="text-2xl font-bold text-white">{formatTime(flight.departureTime)}</p>
+              <p className="text-sm text-gray-400">{flight.origin}</p>
             </div>
             
             <div className="flex-1 relative">
@@ -76,20 +76,20 @@ const FlightCard = ({ flight, onSelect, onViewDetails }) => {
               </div>
             </div>
             
-            <div className="text-center">
-              <p className="text-2xl font-bold text-gray-900">{formatTime(flight.arrivalTime)}</p>
-              <p className="text-sm text-gray-600">{flight.destination}</p>
+<div className="text-center">
+              <p className="text-2xl font-bold text-white">{formatTime(flight.arrivalTime)}</p>
+              <p className="text-sm text-gray-400">{flight.destination}</p>
             </div>
           </div>
           
-          <div className="text-right ml-8">
-            <p className="text-3xl font-bold text-accent">₹{flight.price.toLocaleString()}</p>
-            <p className="text-sm text-gray-600">per person</p>
+<div className="text-right ml-8">
+            <p className="text-3xl font-bold text-cyan-400">₹{flight.price.toLocaleString()}</p>
+            <p className="text-sm text-gray-400">per person</p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4 text-sm text-gray-600">
+<div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4 text-sm text-gray-400">
             <div className="flex items-center space-x-1">
               <ApperIcon name="Users" className="w-4 h-4" />
               <span>{flight.availableSeats} seats left</span>
@@ -102,16 +102,16 @@ const FlightCard = ({ flight, onSelect, onViewDetails }) => {
           
           <div className="flex items-center space-x-2">
             <Button
-              variant="outline"
+variant="outline"
               size="sm"
               onClick={() => onViewDetails(flight)}
-              className="group-hover:border-primary group-hover:text-primary"
+              className="group-hover:border-purple-400 group-hover:text-purple-400 border-gray-600 text-gray-300"
             >
               View Details
             </Button>
-            <Button
+<Button
               onClick={() => onSelect(flight)}
-              className="bg-gradient-to-r from-accent to-yellow-500 hover:from-yellow-500 hover:to-accent"
+              className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600"
             >
               Select Flight
             </Button>

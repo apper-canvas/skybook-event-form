@@ -41,32 +41,32 @@ const BookingSummary = ({ flight, passengers, contactInfo, onConfirmBooking, onB
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Flight Details */}
         <div className="lg:col-span-2 space-y-6">
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+<Card className="p-6 bg-gray-800 border-gray-700">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <ApperIcon name="Plane" className="w-5 h-5 mr-2" />
               Flight Details
             </h3>
             
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+<div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-full flex items-center justify-center">
                     <ApperIcon name="Plane" className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{flight.airline}</h4>
-                    <p className="text-sm text-gray-600">{flight.flightNumber}</p>
+                    <h4 className="font-semibold text-white">{flight.airline}</h4>
+                    <p className="text-sm text-gray-400">{flight.flightNumber}</p>
                   </div>
                 </div>
                 <Badge variant="primary">{flight.class}</Badge>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-4">
+<div className="bg-gray-700 rounded-lg p-4">
                 <div className="flex items-center justify-between">
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-gray-900">{formatTime(flight.departureTime)}</p>
-                    <p className="text-sm text-gray-600">{flight.origin}</p>
-                    <p className="text-xs text-gray-500">{formatDate(flight.departureTime)}</p>
+                    <p className="text-2xl font-bold text-white">{formatTime(flight.departureTime)}</p>
+                    <p className="text-sm text-gray-300">{flight.origin}</p>
+                    <p className="text-xs text-gray-400">{formatDate(flight.departureTime)}</p>
                   </div>
                   
                   <div className="flex-1 relative mx-8">
@@ -82,10 +82,10 @@ const BookingSummary = ({ flight, passengers, contactInfo, onConfirmBooking, onB
                     </div>
                   </div>
                   
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-gray-900">{formatTime(flight.arrivalTime)}</p>
-                    <p className="text-sm text-gray-600">{flight.destination}</p>
-                    <p className="text-xs text-gray-500">{formatDate(flight.arrivalTime)}</p>
+<div className="text-center">
+                    <p className="text-2xl font-bold text-white">{formatTime(flight.arrivalTime)}</p>
+                    <p className="text-sm text-gray-300">{flight.destination}</p>
+                    <p className="text-xs text-gray-400">{formatDate(flight.arrivalTime)}</p>
                   </div>
                 </div>
               </div>
@@ -93,8 +93,8 @@ const BookingSummary = ({ flight, passengers, contactInfo, onConfirmBooking, onB
           </Card>
 
           {/* Passenger Details */}
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+<Card className="p-6 bg-gray-800 border-gray-700">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <ApperIcon name="Users" className="w-5 h-5 mr-2" />
               Passenger Details
             </h3>
@@ -121,8 +121,8 @@ const BookingSummary = ({ flight, passengers, contactInfo, onConfirmBooking, onB
           </Card>
 
           {/* Contact Information */}
-          <Card className="p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+<Card className="p-6 bg-gray-800 border-gray-700">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <ApperIcon name="Mail" className="w-5 h-5 mr-2" />
               Contact Information
             </h3>
@@ -144,8 +144,8 @@ const BookingSummary = ({ flight, passengers, contactInfo, onConfirmBooking, onB
 
         {/* Price Summary */}
         <div className="lg:col-span-1">
-          <Card className="p-6 sticky top-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+<Card className="p-6 sticky top-6 bg-gray-800 border-gray-700">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <ApperIcon name="Receipt" className="w-5 h-5 mr-2" />
               Price Summary
             </h3>
@@ -169,15 +169,15 @@ const BookingSummary = ({ flight, passengers, contactInfo, onConfirmBooking, onB
               <div className="border-t pt-3">
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-gray-900">Total</span>
-                  <span className="text-2xl font-bold text-accent">₹{totalPrice.toLocaleString()}</span>
+<span className="text-2xl font-bold text-cyan-400">₹{totalPrice.toLocaleString()}</span>
                 </div>
               </div>
             </div>
 
             <div className="space-y-3">
-              <Button
+<Button
                 onClick={onConfirmBooking}
-                className="w-full bg-gradient-to-r from-success to-green-600 hover:from-green-600 hover:to-success text-white py-3"
+                className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-emerald-600 hover:to-green-600 text-white py-3"
               >
                 <ApperIcon name="CreditCard" className="w-5 h-5 mr-2" />
                 Confirm & Pay

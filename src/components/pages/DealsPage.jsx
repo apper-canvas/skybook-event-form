@@ -156,13 +156,13 @@ const DealsPage = () => {
     return <Error title="Failed to Load Deals" message={error} onRetry={loadDeals} />;
   }
 
-  return (
-    <div className="min-h-screen bg-background">
-      <div className="bg-gradient-to-r from-accent via-yellow-500 to-accent py-8">
+return (
+    <div className="min-h-screen bg-gray-900">
+      <div className="bg-gradient-to-r from-purple-800 via-cyan-600 to-purple-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-2">Flight Deals & Offers</h1>
-            <p className="text-yellow-100 text-lg">
+            <p className="text-purple-100 text-lg">
               Exclusive discounts and special offers for your next journey
             </p>
           </div>
@@ -177,10 +177,10 @@ const DealsPage = () => {
               <button
                 key={option.value}
                 onClick={() => setFilter(option.value)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   filter === option.value
-                    ? "bg-accent text-white shadow-lg"
-                    : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
+                    ? "bg-purple-600 text-white shadow-lg"
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-600"
                 }`}
               >
                 {option.label}
@@ -276,9 +276,9 @@ const DealsPage = () => {
 
                   {/* Action Button */}
                   <div className="px-6 pb-6">
-                    <Button
+<Button
                       onClick={() => handleBookDeal(deal)}
-                      className="w-full bg-gradient-to-r from-accent to-yellow-500 hover:from-yellow-500 hover:to-accent text-white font-semibold py-3 transform hover:scale-105 transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600 text-white font-semibold py-3 transform hover:scale-105 transition-all duration-300"
                     >
                       <ApperIcon name="Tag" className="w-5 h-5 mr-2" />
                       Book This Deal

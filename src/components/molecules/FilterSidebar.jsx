@@ -84,9 +84,9 @@ const FilterSidebar = ({ filters, onFiltersChange, onClearFilters }) => {
       transition={{ duration: 0.3 }}
       className="space-y-6"
     >
-      <Card className="p-6">
+<Card className="p-6 bg-gray-800 border-gray-700">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+          <h3 className="text-lg font-semibold text-white flex items-center">
             <ApperIcon name="Filter" className="w-5 h-5 mr-2" />
             Filters
           </h3>
@@ -97,7 +97,7 @@ const FilterSidebar = ({ filters, onFiltersChange, onClearFilters }) => {
                 variant="ghost"
                 size="sm"
                 onClick={clearAllFilters}
-                className="text-xs"
+                className="text-xs text-gray-300 hover:text-white"
               >
                 Clear All
               </Button>
@@ -106,8 +106,8 @@ const FilterSidebar = ({ filters, onFiltersChange, onClearFilters }) => {
         </div>
 
         {/* Price Range */}
-        <div className="mb-6">
-          <h4 className="font-medium text-gray-900 mb-3">Price Range</h4>
+<div className="mb-6">
+          <h4 className="font-medium text-white mb-3">Price Range</h4>
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
               <input
@@ -127,7 +127,7 @@ const FilterSidebar = ({ filters, onFiltersChange, onClearFilters }) => {
                 className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
               />
             </div>
-            <div className="flex justify-between text-sm text-gray-600">
+<div className="flex justify-between text-sm text-gray-300">
               <span>₹{priceRange[0].toLocaleString()}</span>
               <span>₹{priceRange[1].toLocaleString()}</span>
             </div>
@@ -136,7 +136,7 @@ const FilterSidebar = ({ filters, onFiltersChange, onClearFilters }) => {
 
         {/* Airlines */}
         <div className="mb-6">
-          <h4 className="font-medium text-gray-900 mb-3">Airlines</h4>
+          <h4 className="font-medium text-white mb-3">Airlines</h4>
           <div className="space-y-2">
             {airlines.map((airline) => (
               <label key={airline.id} className="flex items-center space-x-3 cursor-pointer">
@@ -144,48 +144,48 @@ const FilterSidebar = ({ filters, onFiltersChange, onClearFilters }) => {
                   type="checkbox"
                   checked={selectedAirlines.includes(airline.id)}
                   onChange={() => handleAirlineToggle(airline.id)}
-                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+className="w-4 h-4 text-purple-500 border-gray-500 rounded focus:ring-purple-500 bg-gray-700"
                 />
-                <span className="flex-1 text-sm text-gray-700">{airline.name}</span>
+                <span className="flex-1 text-sm text-gray-300">{airline.name}</span>
                 <span className="text-xs text-gray-500">({airline.count})</span>
               </label>
             ))}
           </div>
         </div>
 
-        {/* Stops */}
+{/* Stops */}
         <div className="mb-6">
-          <h4 className="font-medium text-gray-900 mb-3">Stops</h4>
+          <h4 className="font-medium text-white mb-3">Stops</h4>
           <div className="space-y-2">
             {stopOptions.map((stop) => (
               <label key={stop.value} className="flex items-center space-x-3 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={selectedStops.includes(stop.value)}
-                  onChange={() => handleStopToggle(stop.value)}
-                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+onChange={() => handleStopToggle(stop.value)}
+                  className="w-4 h-4 text-purple-500 border-gray-500 rounded focus:ring-purple-500 bg-gray-700"
                 />
-                <span className="flex-1 text-sm text-gray-700">{stop.label}</span>
+                <span className="flex-1 text-sm text-gray-300">{stop.label}</span>
                 <span className="text-xs text-gray-500">({stop.count})</span>
               </label>
             ))}
           </div>
         </div>
 
-        {/* Departure Time */}
+{/* Departure Time */}
         <div>
-          <h4 className="font-medium text-gray-900 mb-3">Departure Time</h4>
+          <h4 className="font-medium text-white mb-3">Departure Time</h4>
           <div className="space-y-2">
             {timeSlots.map((slot) => (
               <label key={slot.value} className="flex items-center space-x-3 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={selectedTimes.includes(slot.value)}
-                  onChange={() => handleTimeToggle(slot.value)}
-                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+onChange={() => handleTimeToggle(slot.value)}
+                  className="w-4 h-4 text-purple-500 border-gray-500 rounded focus:ring-purple-500 bg-gray-700"
                 />
                 <div className="flex-1">
-                  <div className="text-sm text-gray-700">{slot.label}</div>
+                  <div className="text-sm text-gray-300">{slot.label}</div>
                   <div className="text-xs text-gray-500">{slot.time}</div>
                 </div>
                 <span className="text-xs text-gray-500">({slot.count})</span>

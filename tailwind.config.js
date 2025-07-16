@@ -6,16 +6,16 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#1E3A8A",
-        secondary: "#3B82F6",
-        accent: "#F59E0B",
-        surface: "#FFFFFF",
-        background: "#F3F4F6",
-        success: "#10B981",
-        warning: "#F59E0B",
-        error: "#EF4444",
-        info: "#3B82F6",
+colors: {
+        primary: "#7C3AED",
+        secondary: "#A855F7",
+        accent: "#06B6D4",
+        surface: "#1F2937",
+        background: "#111827",
+        success: "#059669",
+        warning: "#D97706",
+        error: "#DC2626",
+        info: "#7C3AED",
       },
       fontFamily: {
         display: ["Plus Jakarta Sans", "sans-serif"],

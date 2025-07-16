@@ -68,8 +68,8 @@ const SearchPage = ({ onFlightSelect }) => {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
       {/* Hero Section */}
       <div className="relative py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -77,16 +77,16 @@ const SearchPage = ({ onFlightSelect }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-gray-900 mb-4"
+            className="text-4xl md:text-6xl font-bold text-white mb-4"
           >
             Find Your Perfect 
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Flight</span>
+            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> Flight</span>
           </motion.h1>
-          <motion.p
+<motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 mb-8"
+            className="text-xl text-gray-300 mb-8"
           >
             Compare prices, find deals, and book your next adventure with confidence
           </motion.p>
@@ -98,8 +98,8 @@ const SearchPage = ({ onFlightSelect }) => {
         </div>
       </div>
 
-      {/* Popular Destinations */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
+{/* Popular Destinations */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -107,8 +107,8 @@ const SearchPage = ({ onFlightSelect }) => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Popular Destinations</h2>
-            <p className="text-gray-600">Discover trending destinations with great flight deals</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Popular Destinations</h2>
+            <p className="text-gray-300">Discover trending destinations with great flight deals</p>
           </motion.div>
 
           <motion.div
@@ -129,12 +129,12 @@ const SearchPage = ({ onFlightSelect }) => {
                     <p className="text-sm text-gray-500">Starting from</p>
                     <p className="text-2xl font-bold text-accent">{destination.price}</p>
                   </div>
-                </div>
+</div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-purple-400 transition-colors">
                     {destination.city}
                   </h3>
-                  <p className="text-gray-600">{destination.country}</p>
+                  <p className="text-gray-300">{destination.country}</p>
                 </div>
               </Card>
             ))}
@@ -142,8 +142,8 @@ const SearchPage = ({ onFlightSelect }) => {
         </div>
       </div>
 
-      {/* Recent Searches */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+{/* Recent Searches */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -151,8 +151,8 @@ const SearchPage = ({ onFlightSelect }) => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Searches</h2>
-            <p className="text-gray-600">Continue where you left off</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Recent Searches</h2>
+            <p className="text-gray-300">Continue where you left off</p>
           </motion.div>
 
           <motion.div
@@ -170,14 +170,14 @@ const SearchPage = ({ onFlightSelect }) => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <ApperIcon name="Clock" className="w-5 h-5 text-gray-400" />
-                    <div>
-                      <p className="font-medium text-gray-900 group-hover:text-primary transition-colors">
+<div>
+                      <p className="font-medium text-white group-hover:text-purple-400 transition-colors">
                         {search.from} → {search.to}
                       </p>
-                      <p className="text-sm text-gray-500">{search.date}</p>
+                      <p className="text-sm text-gray-400">{search.date}</p>
                     </div>
                   </div>
-                  <p className="font-bold text-accent">{search.price}</p>
+                  <p className="font-bold text-cyan-400">{search.price}</p>
                 </div>
               </Card>
             ))}

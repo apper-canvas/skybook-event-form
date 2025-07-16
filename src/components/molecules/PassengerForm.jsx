@@ -62,8 +62,8 @@ const PassengerForm = ({ passengerCount, onSubmit }) => {
       className="space-y-6"
     >
       {/* Contact Information */}
-      <Card className="p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+<Card className="p-6 bg-gray-800 border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
           <ApperIcon name="Mail" className="w-5 h-5 mr-2" />
           Contact Information
         </h3>
@@ -89,11 +89,11 @@ const PassengerForm = ({ passengerCount, onSubmit }) => {
 
       {/* Passenger Details */}
       {passengers.map((passenger, index) => (
-        <Card key={passenger.id} className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+<Card key={passenger.id} className="p-6 bg-gray-800 border-gray-700">
+          <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
             <ApperIcon name="User" className="w-5 h-5 mr-2" />
             Passenger {index + 1}
-            {index === 0 && <span className="ml-2 text-sm font-normal text-gray-600">(Primary)</span>}
+            {index === 0 && <span className="ml-2 text-sm font-normal text-gray-400">(Primary)</span>}
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -178,7 +178,7 @@ const PassengerForm = ({ passengerCount, onSubmit }) => {
         <Button type="button" variant="outline">
           Back
         </Button>
-        <Button type="submit" className="bg-gradient-to-r from-primary to-secondary">
+<Button type="submit" className="bg-gradient-to-r from-purple-600 to-cyan-500">
           <ApperIcon name="ArrowRight" className="w-4 h-4 mr-2" />
           Continue to Payment
         </Button>

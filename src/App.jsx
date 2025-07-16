@@ -22,9 +22,9 @@ function App() {
     setSearchCriteria(criteria);
   };
 
-  return (
+return (
     <Router>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-gray-900">
         <Header />
         
         <main>

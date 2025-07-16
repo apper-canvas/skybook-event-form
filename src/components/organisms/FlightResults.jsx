@@ -175,12 +175,12 @@ const FlightResults = ({ searchCriteria, onFlightSelect }) => {
         {/* Results */}
         <div className="lg:col-span-3">
           {/* Results Header */}
-          <div className="flex items-center justify-between mb-6">
+<div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">
+              <h2 className="text-2xl font-bold text-white">
                 {searchCriteria?.origin} → {searchCriteria?.destination}
               </h2>
-              <p className="text-gray-600 mt-1">
+              <p className="text-gray-300 mt-1">
                 {filteredFlights.length} flights found
                 {searchCriteria?.departureDate && (
                   <span className="ml-2">

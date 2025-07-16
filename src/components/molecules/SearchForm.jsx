@@ -42,15 +42,15 @@ const SearchForm = ({ onSearch, className }) => {
   ];
 
   return (
-    <motion.div
-      className={cn("bg-white rounded-xl shadow-lg p-6", className)}
+<motion.div
+      className={cn("bg-gray-800 border border-gray-700 rounded-xl shadow-lg p-6", className)}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Book Your Flight</h2>
-        <p className="text-gray-600">Find the best deals on flights worldwide</p>
+        <h2 className="text-2xl font-bold text-white mb-2">Book Your Flight</h2>
+        <p className="text-gray-300">Find the best deals on flights worldwide</p>
       </div>
 
       <div className="mb-4">
@@ -60,10 +60,10 @@ const SearchForm = ({ onSearch, className }) => {
               key={type}
               onClick={() => handleInputChange("tripType", type)}
               className={cn(
-                "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+"px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                 searchData.tripType === type
-                  ? "bg-primary text-white shadow-md"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  ? "bg-purple-600 text-white shadow-md"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
               )}
             >
               {type.charAt(0).toUpperCase() + type.slice(1).replace("-", " ")}
@@ -161,8 +161,8 @@ const SearchForm = ({ onSearch, className }) => {
         </div>
 
         <Button
-          type="submit"
-          className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+type="submit"
+          className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
         >
           <ApperIcon name="Search" className="w-5 h-5 mr-2" />
           Search Flights

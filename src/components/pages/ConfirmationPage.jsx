@@ -44,8 +44,8 @@ const ConfirmationPage = () => {
     return `${stops} Stops`;
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50">
+return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Success Header */}
         <motion.div
@@ -57,20 +57,20 @@ const ConfirmationPage = () => {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-success to-green-600 rounded-full mb-6"
+transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-6"
           >
             <ApperIcon name="CheckCircle" className="w-12 h-12 text-white" />
           </motion.div>
           
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-white mb-4">
             Booking Confirmed!
           </h1>
-          <p className="text-xl text-gray-600 mb-2">
+          <p className="text-xl text-gray-300 mb-2">
             Your flight has been successfully booked
           </p>
-          <p className="text-lg text-gray-500">
-            Booking ID: <span className="font-semibold text-primary">{booking.bookingId}</span>
+          <p className="text-lg text-gray-400">
+            Booking ID: <span className="font-semibold text-purple-400">{booking.bookingId}</span>
           </p>
         </motion.div>
 
@@ -197,9 +197,9 @@ const ConfirmationPage = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Button
+<Button
             onClick={() => navigate("/")}
-            className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary px-8 py-3"
+            className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600 px-8 py-3"
           >
             <ApperIcon name="Search" className="w-5 h-5 mr-2" />
             Book Another Flight
