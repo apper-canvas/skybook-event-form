@@ -145,7 +145,7 @@ const FlightResults = ({ searchCriteria, onFlightSelect }) => {
     return <Loading type="flights" />;
   }
 
-  if (error) {
+if (error) {
     return <Error title="Search Failed" message={error} onRetry={searchFlights} />;
   }
 
