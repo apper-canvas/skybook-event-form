@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
 import { toast } from "react-toastify";
+import FlightStatusWidget from "@/components/molecules/FlightStatusWidget";
 import ApperIcon from "@/components/ApperIcon";
+import Badge from "@/components/atoms/Badge";
 import Button from "@/components/atoms/Button";
 import Card from "@/components/atoms/Card";
-import Badge from "@/components/atoms/Badge";
-import Loading from "@/components/ui/Loading";
-import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
+import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
 import { bookingService } from "@/services/api/bookingService";
 
 const MyBookingsPage = () => {
@@ -208,11 +209,13 @@ const MyBookingsPage = () => {
                             <p className="text-sm text-gray-600">{flight.destination}</p>
                             <p className="text-xs text-gray-500">{formatDate(flight.arrivalTime)}</p>
                           </div>
-                        </div>
+</div>
                       </div>
+                      
+                      {/* Flight Status Widget */}
+                      <FlightStatusWidget flight={flight} />
                     </div>
                   ))}
-
                   {/* Passenger Details */}
                   <div className="mb-6">
                     <h4 className="font-medium text-gray-900 mb-3">Passengers</h4>
