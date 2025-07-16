@@ -8,6 +8,7 @@ import ConfirmationPage from "@/components/pages/ConfirmationPage";
 import MyBookingsPage from "@/components/pages/MyBookingsPage";
 import DealsPage from "@/components/pages/DealsPage";
 import SupportPage from "@/components/pages/SupportPage";
+import FlightsPage from "@/components/pages/FlightsPage";
 
 function App() {
   const [selectedFlight, setSelectedFlight] = useState(null);
@@ -46,9 +47,18 @@ function App() {
                 />
               } 
             />
-            <Route path="/confirmation" element={<ConfirmationPage />} />
+<Route path="/confirmation" element={<ConfirmationPage />} />
             <Route path="/bookings" element={<MyBookingsPage />} />
             <Route path="/deals" element={<DealsPage />} />
+            <Route 
+              path="/flights" 
+              element={
+                <FlightsPage 
+                  onFlightSelect={handleFlightSelect}
+                  onSearch={handleSearch}
+                />
+              } 
+            />
             <Route path="/support" element={<SupportPage />} />
           </Routes>
         </main>
